@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import QuestionCard from './QuestionCard';
 import { questionList } from '../questionList'; 
-import Header from './header';
+import Header from './Header';
 
 const CardContainer = styled.div`
     display: grid;
