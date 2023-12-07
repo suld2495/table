@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -22,16 +21,6 @@ const NavigationContainer = styled.nav`
   display: flex;
   gap: 50px;
   margin: 20px;
-`;
-
-const NavigationItem = styled.a`
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
 const Header = () => {

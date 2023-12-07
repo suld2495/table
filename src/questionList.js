@@ -60,13 +60,3 @@ export const questionList = [
     color: '#990099',
   }
 ];
-
-// function getRandomColor() {
-//   // Generate a random hex color
-//   return '#' + Math.floor(Math.random() * 16777215).toString(16);
-// }
-
-`
-
-https://ahaslides.com/ko/blog/interesting-questions-to-ask/
-https://asana.com/ko/resources/icebreaker-questions-team-building`
