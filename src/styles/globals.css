@@ -22,6 +22,7 @@
 .profile-item {
   position: relative;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .profile-item__img {
@@ -66,4 +67,20 @@
   background: #000;
   border-radius: 100%;
   padding: 20px;
+}
+
+.ReactModalPortal {
+  width: 100%;
+  color: #111;
+}
+
+.ReactModalPortal h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ReactModalPortal .detail {
+  font-size: 15px;
+  margin-bottom: 20px;
 }
