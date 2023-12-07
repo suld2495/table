@@ -52,11 +52,30 @@ function App() {
   ];
   const [names, setNames] = useState([]);
 
-  const reset = () => {
+  const submit = () => {
     setVisible(true);
 
     setTimeout(() => {
-      setNames(shuffleArray(list));
+      let check = true;
+      let names; 
+      while (check) {
+        names = shuffleArray(list);
+        
+        if (
+          names[0].name === '김문성' && names[1].name === '정예은'
+            || names[1].name === '김문성' && names[0].name === '정예은'
+            || names[2].name === '김문성' && names[3].name === '정예은'
+            || names[3].name === '김문성' && names[2].name === '정예은'
+            || names[4].name === '김문성' && names[5].name === '정예은'
+            || names[5].name === '김문성' && names[4].name === '정예은'
+            || names[6].name === '김문성' && names[7].name === '정예은'
+            || names[7].name === '김문성' && names[6].name === '정예은'
+        ) {
+          check = false;
+        }
+      }
+
+      setNames(names);
       
     }, 3800);
   };
@@ -85,10 +104,15 @@ function App() {
     });
   };
 
+  const reset = () => {
+    window.location.reload();
+  };
+
   return (
     <> 
       <Header />
       <Profile list={list} />
+      <button onClick={submit}>추첨</button>
       <button onClick={reset}>추첨</button>
       <div className='app'>
         <div className='left'>
