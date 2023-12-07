@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import './App.css'
+import './App.css';
+import Header from './components/header';
 import Profile from './components/Profile';
 import Loadingbar from './components/Loadingbar';
 
@@ -85,7 +86,8 @@ function App() {
   };
 
   return (
-    <>
+    <> 
+      <Header />
       <Profile list={list} />
       <button onClick={reset}>추첨</button>
       <div className='app'>
