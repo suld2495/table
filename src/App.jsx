@@ -3,7 +3,6 @@ import './App.css';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import Loadingbar from './components/Loadingbar';
-import FriendModal from './components/FriendModal';
 
 const shuffleArray = (array) => {
   for (var i = array.length - 1; i > 0; i--) {
@@ -17,9 +16,6 @@ const shuffleArray = (array) => {
 
 function App() {
   const [visible, setVisible] = useState(false); 
-  const [modal, setModal] = useState(false); 
-  const [name, setName] = useState(""); 
-  const [description, setDescription] = useState(""); 
   const list = [
     { 
       name : '김효영',
@@ -38,28 +34,23 @@ function App() {
     }, 
     { 
       name : '정예은',
-      url: 'yen',
-      description: '문성님의 친구'
+      url: 'yen'
     }, 
     { 
       name : '김은희',
-      url: 'eunhee',
-      description: '윤지님의 친구'
+      url: 'eunhee'
     }, 
     { 
       name : '최윤이',
-      url: 'yooni',
-      description: '효영님의 친구'
+      url: 'yooni'
     }, 
     { 
       name : '강다원',
-      url: 'dawon',
-      description: '효영님의 친구'
+      url: 'dawon'
     }, 
     { 
       name : '강다혜',
-      url: 'dahey',
-      description: '효영님의 친구'
+      url: 'dahey'
     }, 
   ];
   const [names, setNames] = useState([]);
@@ -120,22 +111,10 @@ function App() {
     window.location.reload();
   };
 
-  const openModal = ({ name, description }) => {
-    setModal(true);
-    setName(name);
-    setDescription(description);
-  };
-
-  const closeModal = () => {
-    setModal(false);
-    setName('');
-    setDescription('');
-  }
-
   return (
     <> 
       <Header />
-      <Profile list={list} openModal={openModal} />
+      <Profile list={list} />
       <button onClick={submit}>추첨</button>
       <button onClick={reset}>리셋</button>
       <div className='app'>
@@ -144,8 +123,8 @@ function App() {
             {
               names
                 .filter((v, i) => i < 4)
-                .map((item) => (
-                  <li className="table-name" key={item.name} data-name={item.name} />
+                .map(({ name }) => (
+                  <li className="table-name" key={name} data-name={name} />
                 ))
             }
           </ul>
@@ -165,7 +144,6 @@ function App() {
       </div>
 
       <Loadingbar visible={visible} setVisible={setVisible} />
-      <FriendModal modal={modal} name={name} description={description} closeModal={closeModal} />
     </>
   )
 }

@@ -13,7 +13,6 @@
     "@tomickigrzegorz/react-circular-progress-bar": "^1.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-modal": "^3.16.1",
     "react-router-dom": "^6.20.1",
     "reset-css": "^5.0.2",
     "styled-components": "^6.1.1"
