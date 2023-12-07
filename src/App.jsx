@@ -12,7 +12,7 @@ const shuffleArray = (array) => {
 }
 
 function App() {
-  const list = ['김효영', '김윤지', '김문성', '최지석', '정예은', '김은희', '최윤이', '강다원', '강다혜'];
+  const list = ['김효영', '김윤지', '김문성', '정예은', '김은희', '최윤이', '강다원', '강다혜'];
   const [names, setNames] = useState([]);
   
   useEffect(() => {
