@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* {
+ font-family: 'Nanum Gothic', sans-serif;
+}
+
+.profile-title {
+  margin-bottom: 10px;
+}
+
+.profile {
+  top: 0;
+  height: 220px;
+}
+
+.profile-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.profile-item {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.profile-item__img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.profile-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+
+.profile-item p {
+  font-size: 13px;
+}
+
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+.loading.opacity {
+  opacity: 0;
+}
+
+.loading-circle {
+  display: inline-flex;
+  background: #000;
+  border-radius: 100%;
+  padding: 20px;
+}
