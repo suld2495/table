@@ -113,7 +113,7 @@ function App() {
       <Header />
       <Profile list={list} />
       <button onClick={submit}>추첨</button>
-      <button onClick={reset}>추첨</button>
+      <button onClick={reset}>리셋</button>
       <div className='app'>
         <div className='left'>
           <ul>
