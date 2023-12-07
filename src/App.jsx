@@ -23,15 +23,18 @@ function App() {
   const list = [
     { 
       name : '김효영',
-      url: 'hyo'
+      url: 'hyo',
+      description: '짱짱맨'
     }, 
     { 
       name : '김윤지',
-      url: 'yun'
+      url: 'yun',
+      description: '멋쟁이'
     }, 
     { 
       name : '김문성',
-      url: 'moon'
+      url: 'moon',
+      description: '잠만보'
     }, 
     { 
       name : '정예은',
