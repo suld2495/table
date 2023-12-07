@@ -1,6 +1,7 @@
 import { createHashRouter } from "react-router-dom";
 import App from "../App.tsx";
-import Question from "./Question.jsx";
+import { Question } from "./components/Question.jsx";
+
 
 const routes = [
   {

@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
-import './App.css'
+import './App.css';
+import Header from './components/header';
+import  Question from "./components/Question.jsx";
+
+
+
 
 const shuffleArray = (array) => {
   for (var i = array.length - 1; i > 0; i--) {
@@ -25,6 +30,7 @@ function App() {
 
   return (
     <> 
+    <Header />
       <button onClick={reset}>리셋</button>
       <div className='app'>
         <div className='left'>
